@@ -1,6 +1,7 @@
 package com.test.training.test;
 
 import com.test.training.ryanAirScreens.MainRyanAirPage;
+import com.test.training.ryanAirScreens.MyBookingsScreen;
 import com.test.training.visionScreens.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,6 +15,7 @@ public class BaseClass {
     SportPage sportPage;
     SportVision sportVision;
     MainRyanAirPage mainRyanAirPage;
+    MyBookingsScreen myBookingsScreen;
 
     @BeforeClass
     public void setUp() throws Exception{
@@ -28,6 +30,7 @@ public class BaseClass {
         sportPage = new SportPage(chromeDriver);
         sportVision = new SportVision(chromeDriver);
         mainRyanAirPage = new MainRyanAirPage(chromeDriver);
+        myBookingsScreen = new MyBookingsScreen(chromeDriver);
     }
 
 
