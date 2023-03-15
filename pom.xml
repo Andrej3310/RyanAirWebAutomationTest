@@ -35,6 +35,7 @@
 
     <build>
         <plugins>
+
             <!-- any other plugins -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
