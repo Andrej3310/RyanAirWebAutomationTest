@@ -23,7 +23,7 @@ public class BaseClass {
         chromeDriver = new ChromeDriver();
         chromeDriver.manage().window().maximize();
         chromeDriver.get("https://www.ryanair.com/gb/en");
-        chromeDriver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+        chromeDriver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 
 
         mainPage = new MainPage(chromeDriver);

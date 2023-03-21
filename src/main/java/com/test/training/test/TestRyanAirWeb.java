@@ -33,9 +33,23 @@ public class TestRyanAirWeb extends BaseClass {
     @Test
     public void SearchFlights() throws InterruptedException {
         mainRyanAirPage.clickOnAgreePrivacy();
-        mainRyanAirPage.selectDepartureCountryAndCity("Greece", "Corfu");
-        mainRyanAirPage.selectDestinationCountryAndCity("United Kingdom", "Thessaloniki");
+        mainRyanAirPage.clickOnOneWayButton();
+        mainRyanAirPage.selectDepartureCountryAndCity("Bulgaria", "Varna");
+        Thread.sleep(2000);
+        mainRyanAirPage.selectDestinationCountryAndCity("Greece", "Thessaloniki");
         //mainRyanAirPage.clickOnSearchButton();
+    }
+
+    @Test
+    public void CheckDepartureCountryExist(){
+        mainRyanAirPage.clickOnAgreePrivacy();
+        mainRyanAirPage.checkCountry("Turkey");
+    }
+
+    @Test
+    public void ListOfAirportsFrom() throws InterruptedException {
+        mainRyanAirPage.clickOnAgreePrivacy();
+        mainRyanAirPage.selectCountryAndCity("Germany", "Dortmund");
     }
 
 }
